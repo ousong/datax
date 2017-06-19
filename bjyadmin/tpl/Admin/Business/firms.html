@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>DataX</title>
+    <link rel="icon" href="__PUBLIC__/Home/images/net_32.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/index.css">
+    
+    <link type="text/css" rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.1.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/home.css">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/devman.css">
+    
+    <!--jQuery-->
+    <script src="__PUBLIC__/Home/libs/jquery.min.js"></script>
+    <script src="__PUBLIC__/Home/js/lib/jqPaginator.min.js"></script>
+    <style type="text/css">
+        img{vertical-align: top};
+        a:hover{
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+<!-- 导航栏 begin-->
+<ul id="index_nav">
+      <span>
+          <img src="__PUBLIC__/Home/images/logo.png" />
+      </span>
+    <li>
+        <a class="index_nav_list" href="{:U('Index/home')}">国家与地区</a>
+        <ul class="sevenContinents">
+            <li>亚洲</li>
+            <li>欧洲</li>
+            <li>北美洲</li>
+            <li>南美洲</li>
+            <li>非洲</li>
+            <li>大洋洲</li>
+            <li>南极洲</li>
+        </ul>
+        <div class="line"></div>
+    </li>
+    <li>
+        <a class="index_nav_list">运营商</a>
+        <ul class="sevenContinents" >
+            <li><a href="{:U('Index/index1')}">运营商</a></li>
+            <li><a href="{:U('Index/query')}">签约关系</a></li>
+            <li style="color: #ccc">网络</li>
+            <li style="color: #ccc">轨迹回放</li>
+        </ul>
+        <div class="line"></div>
+    </li>
+    <li class="active">
+        <a class="index_nav_list">业务查询</a>
+        <ul class="sevenContinents" style="display: block">
+            <li><a href="{:U('Index/serviceoperation')}">运营商</a></li>
+            <li><a href="{:U('Index/querybusiness')}">查询业务</a></li>
+            <li class="active2"><a href="{:U('Index/devman')}">设备厂商</a></li>
+            <li><a href="{:U('Index/ne')}">网元</a></li>
+            <li><a href="{:U('Index/lac')}">LAC表</a></li>
+        </ul>
+        <div class="line active1"></div>
+    </li>
+</ul>
+<!-- 导航栏 end-->
+<!--搜索框-->
+<div class="search_top clearfix">
+    <div class="search_top_l">
+        <input type="text">
+        <div class="search_pic">
+            <img src="__PUBLIC__/Home/images/search.png">
+        </div>
+    </div>
+    <div class="search_top_r clearfix">
+        <div class="people">
+            <img src="__PUBLIC__/Home/images/people.png">
+        </div>
+    </div>
+</div>
+<!--搜索框end-->
+<!-- 模板展示 begin -->
+<div id="mapId" class="fad">
+    <div class="operator_t">
+        <div class="allChoose">
+            <!--<span class="allChoose_con">
+                亚洲-中国-中国移动
+                <img src="images/chacha.png">
+            </span>-->
+             <span class="allChoose_con1" style="opacity:0">
+                导出表单
+            </span>
+            <div class="search clearfix">
+                <div class="search_warp">
+                    <input type="text" placeholder="输入查找文字">
+                </div>
+                <div class="button">确定</div>
+            </div>
+        </div>
+        <div class="chau clearfix" id="devman">
+            <div class="chau_l">设备厂商：</div>
+            <div class="chau_r">
+                <span onclick="devman('2','HUAWEI')">华为</span><span onclick="devman('2','Cisco')">思科</span>
+                <span onclick="devman('2','Ericsson')">爱立信</span><span onclick="devman('2','Siemens')">西门子</span>
+            </div>
+        </div>
+        <div class="chau clearfix" id="devtype" style="display: none;">
+            <div class="chau_l">设备类型：</div>
+            <div class="chau_r">
+            </div>
+        </div>
+        <div class="chau clearfix" id="devversion" style="display: none;">
+            <div class="chau_l">版本号：</div>
+            <div class="chau_r">
+            </div>
+        </div>
+        <div class="chau clearfix" id="devpatch" style="display: none;">
+            <div class="chau_l">补丁号：</div>
+            <div class="chau_r">
+            </div>
+        </div>
+    </div>
+    <div class="operator_b">
+        <table cellpadding="0" cellspacing="0" border="1">
+            <thead>
+            <tr>
+                <th>国家名</th>
+                <th>网元类型</th>
+                <th>运营商</th>
+                <th>信令点</th>
+                <th>操作系统</th>
+                <th>核心芯片厂家</th>
+                <th>设备厂家</th>
+                <th>模块型号</th>
+                <th>版本号</th>
+                <th>补丁号</th>
+                <th>接口类型</th>
+                <th>接口数</th>
+                <th>网卡类型</th>
+            </tr>
+            </thead>
+            <tbody id="patchnum123">
+            <!-- <tr>
+                <td>中国移动</td>
+                <td>zhong</td>
+                <td>erwfefds643</td>
+                <td>5</td>
+                <td>中国移动</td>
+                <td>zhong</td>
+                <td>erwfefds643</td>
+                <td>5</td>
+                <td>中国移动</td>
+                <td>zhong</td>
+                <td>erwfefds643</td>
+                <td>5</td>
+                <td>5</td>
+            </tr> -->
+            </tbody>
+        </table>
+        <ul class="pagination" id="id1"></ul>
+    </div>
+</div>
+<!-- 模板展示 end -->
+    <script src="__PUBLIC__/Home/js/devman.js"></script>
+    <script src="__PUBLIC__/Home/js/nav.js"></script>
+</body>
+</html>

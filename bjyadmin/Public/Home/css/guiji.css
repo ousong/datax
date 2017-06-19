@@ -1,0 +1,141 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+.guiji{
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 175px;
+    height: calc(100% - 60px);
+    background-color: #fff;
+    font-size: 14px;
+    color: #000;
+    z-index: 999;
+}
+.guiji > .guiki_t{
+    height: 58px;
+    padding-left: 28px;
+    line-height: 58px;
+
+}
+.guiji > .guiji_b > .guiji_bul{
+    border-top:1px solid #e5e5e5;
+}
+.guiji > .guiji_b > .guiji_bul > .guiji_bli{
+    margin-bottom: 20px;
+    padding-left: 28px;
+}
+.guiji > .guiji_b > .guiji_bul > .guiji_bli > .guiji_bli_t{
+    line-height: 42px;
+}
+.guiji > .guiji_b > .guiji_bul > .guiji_bli > .guiji_bli_b{
+    width: 110px;
+    height: 24px;
+    border: 1px solid #d2d2d2;
+}
+.guiji > .guiji_b > .guiji_bul > .guiji_bli > .guiji_bli_b > input{
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    padding-left: 10px;
+}
+.guiji > .guiji_b > .guiji_bul > .chaxun{
+    width: 71px;
+    height: 30px;
+    margin: 26px auto;
+    line-height: 30px;
+    text-align: center;
+    background-color: #596f90;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+    cursor: pointer;
+}
+.qiehuan{
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    z-index: 888;
+    background-color: #000;
+    cursor: pointer;
+}
+
+.ningBox{
+    width: 200px;
+    height: calc(100% - 60px);
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    z-index: 100000000000;
+    display: none;
+    border-left: 5px solid #fff;
+}
+.xxbtn{
+    width: 30px;
+    height: 30px;
+    background: #ddd;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #666;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5px;
+
+}
+.zbidd{
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    border-top: 1px solid #bbb;
+} 
+
+.zbphone{
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    border-top: 1px solid #bbb;
+}   
+
+.zbimsi{
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    border-top: 1px solid #bbb;
+}  
+.zbbox {
+    width: 200px;
+    height: 695px;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    border-top: 1px solid #bbb;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}  
+.zbbox p{
+    display: inline-block;
+    width: 200px;
+    height: 70px;
+    line-height: 26px;
+    border-bottom: 1px dashed #ddd;
+}  
+
+
+
+
+
+

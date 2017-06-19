@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DataX</title>
+    <link rel="icon" href="__PUBLIC__/Home/images/net_32.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/index.css">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/index1.css">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/home.css">
+    <!--jQuery-->
+    <script src="__PUBLIC__/Home/libs/jquery.min.js"></script>
+    <!--leaflet/echarts-->
+    <link rel="stylesheet" href="__PUBLIC__/Home/libs/leaflet/leaflet.css" />
+    <script src="__PUBLIC__/Home/libs/leaflet/leaflet.js"></script>
+</head>
+<body>
+<!-- 导航栏 begin-->
+<ul id="index_nav">
+      <span>
+          <img src="__PUBLIC__/Home/images/logo.png" />
+      </span>
+    <li>
+        <a class="index_nav_list" href="{:U('Index/home')}">国家与地区</a>
+        <ul class="sevenContinents">
+            <li>亚洲</li>
+            <li>欧洲</li>
+            <li>北美洲</li>
+            <li>南美洲</li>
+            <li>非洲</li>
+            <li>大洋洲</li>
+            <li>南极洲</li>
+        </ul>
+        <div class="line"></div>
+    </li>
+    <li class="active">
+        <a class="index_nav_list">运营商</a>
+        <ul class="sevenContinents" style="display: block">
+            <li class="active2"><a href="{:U('Index/index1')}">运营商</a></li>
+            <li><a href="{:U('Index/query')}">签约关系</a></li>
+            <li style="color: #ccc">网络</li>
+            <li style="color: #ccc">轨迹回放</li>
+        </ul>
+        <div class="line active1"></div>
+    </li>
+    <li >
+        <a class="index_nav_list">业务查询</a>
+        <ul class="sevenContinents">
+            <li><a href="{:U('Index/serviceoperation')}">运营商</a></li>
+            <li><a href="{:U('Index/querybusiness')}">查询业务</a></li>
+            <li><a href="{:U('Index/devman')}">设备厂商</a></li>
+            <li><a href="{:U('Index/ne')}">网元</a></li>
+            <li><a href="{:U('Index/lac')}">LAC表</a></li>
+        </ul>
+        <div class="line"></div>
+    </li>
+</ul>
+<!-- 导航栏 end-->
+    <!--搜索框-->
+    <div class="search_top clearfix">
+        <div class="search_top_l">
+            <input type="text">
+            <div class="search_pic">
+                <img src="__PUBLIC__/Home/images/search.png">
+            </div>
+        </div>
+        <div class="search_top_r clearfix">
+            <div class="people">
+                <img src="__PUBLIC__/Home/images/people.png">
+            </div>
+        </div>
+    </div>
+    <!--搜索框end-->
+    <!-- 模板展示 begin -->
+    <div id="mapBusiness">
+        <div id = "mapBtn"></div>
+    </div>
+    <!--遮罩层-->
+
+    <ul id="showUL">
+
+    </ul>
+<ul id="newUL">
+<!--    <li>
+        <span class="guojia">运营商介绍</span>
+        <p>名称:<span id = "name">的三家分晋肯定是个艰苦奋斗</span></p >
+        <p>所属国家:<span id = "country">中国</span></p >
+        <p>国家编号:<span id = "country_code">325432542</span></p >
+        <p>漫游签约数:<span id = "signcount">32</span></p >
+    </li>
+    <li>
+        <span class="guojia">网络制式</span>
+        <p>fee:<span id="network">fdsfsfds</span></p >
+    </li>-->
+</ul>
+    <!-- 模板展示 end -->
+    <script src="__PUBLIC__/Home/js/index1.js"></script>
+    <script src="__PUBLIC__/Home/js/nav.js"></script>
+</body>
+</html>

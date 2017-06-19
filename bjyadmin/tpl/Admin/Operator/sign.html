@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DataX</title>
+    <link rel="icon" href="__PUBLIC__/Home/images/net_32.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/index2.css">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/index.css">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/home.css">
+
+
+    <!--jQuery-->
+    <script src="__PUBLIC__/Home/libs/jquery.min.js"></script>
+    <!--leaflet/echarts-->
+    <link rel="stylesheet" href="__PUBLIC__/Home/libs/leaflet/leaflet.css" />
+    <script src="__PUBLIC__/Home/libs/leaflet/leaflet.js"></script>
+    <script src="__PUBLIC__/Home/libs/leaflet/leaflet-echarts.js"></script>
+    <script src="__PUBLIC__/Home/libs/leaflet/echarts.source.js"></script>
+
+</head>
+<body>
+<!-- 导航栏 begin-->
+<ul id="index_nav">
+      <span>
+          <img src="__PUBLIC__/Home/images/logo.png" />
+      </span>
+    <li>
+        <a class="index_nav_list" href="{:U('Index/home')}">国家与地区</a>
+        <ul class="sevenContinents">
+            <li>亚洲</li>
+            <li>欧洲</li>
+            <li>北美洲</li>
+            <li>南美洲</li>
+            <li>非洲</li>
+            <li>大洋洲</li>
+            <li>南极洲</li>
+        </ul>
+        <div class="line"></div>
+    </li>
+    <li class="active">
+        <a class="index_nav_list">运营商</a>
+        <ul class="sevenContinents" style="display: block">
+            <li><a href="{:U('Index/index1')}">运营商</a></li>
+            <li class="active2"><a href="{:U('Index/query')}">签约关系</a></li>
+            <li style="color: #ccc">网络</li>
+            <li style="color: #ccc">轨迹回放</li>
+        </ul>
+        <div class="line active1"></div>
+    </li>
+    <li >
+        <a class="index_nav_list">业务查询</a>
+        <ul class="sevenContinents">
+            <li><a href="{:U('Index/serviceoperation')}">运营商</a></li>
+            <li><a href="{:U('Index/querybusiness')}">查询业务</a></li>
+            <li><a href="{:U('Index/devman')}">设备厂商</a></li>
+            <li><a href="{:U('Index/ne')}">网元</a></li>
+            <li><a href="{:U('Index/lac')}">LAC表</a></li>
+        </ul>
+        <div class="line"></div>
+    </li>
+</ul>
+<!-- 导航栏 end-->
+<!--搜索框-->
+<div class="search_top clearfix">
+    <div class="search_top_l">
+        <input type="text">
+        <div class="search_pic">
+            <img src="__PUBLIC__/Home/images/search.png">
+        </div>
+    </div>
+    <div class="search_top_r clearfix">
+<!--         <div class="mail">
+            <img src="__PUBLIC__/Home/images/mail.png">
+        </div> -->
+        <div class="people">
+            <img src="__PUBLIC__/Home/images/people.png">
+        </div>
+    </div>
+</div>
+<!--搜索框end-->
+<!-- 模板展示 begin -->
+<div id="mapBusiness">
+    <div id = "mapBtn"></div>
+</div>
+<ul id="showUL">
+    <!-- <p>中华人民共和国</p>
+    <li class="li01"><img src="__PUBLIC__/Home/images/img.png" /></li>
+    <li><img src="__PUBLIC__/Home/images/img.png" /></li>
+    <li><img src="__PUBLIC__/Home/images/img.png" /></li>
+    <li><img src="__PUBLIC__/Home/images/img.png" /></li>
+    <li><img src="__PUBLIC__/Home/images/img.png" /></li> -->
+</ul>
+<ul id="newUL">
+    <!--<li id="newULli">
+        <span>中国</span>
+        <p>中国移动集团公司</p >
+        <p>中国联通集团公司</p >
+        <p>中国电信集团公司</p >
+    </li> &ndash;&gt;-->
+</ul>
+<!-- 模板展示 end -->
+
+
+<script src="__PUBLIC__/Home/js/index2.js"></script>
+<script src="__PUBLIC__/Home/js/nav.js"></script>
+</body>
+</html>

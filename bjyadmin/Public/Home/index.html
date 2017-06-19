@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> angular Project</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/one.css">
+    <link rel="stylesheet" href="css/two.css">
+
+
+    <!--jQuery-->
+    <script src="libs/jquery.min.js"></script>
+   <!--openLayers-->
+    <link href="libs/openLayers/ol.css" />
+    <script src="libs/openLayers/ol.js"></script>
+
+
+</head>
+<body>
+<!-- 导航栏 begin-->
+<ul id="index_nav">
+      <span>
+          <img src="images/logo.png" />
+      </span>
+    <li>
+        <a class="index_nav_list">国家与地区</a>
+        <ul class="sevenContinents">
+            <li>亚洲</li>
+            <li>欧洲</li>
+            <li>北美洲</li>
+            <li>南美洲</li>
+            <li>非洲</li>
+            <li>大洋洲</li>
+            <li>南极洲</li>
+        </ul>
+        <div class="line"></div>
+    </li>
+    <li>
+        <a class="index_nav_list">运营商</a>
+        <div class="line"></div>
+    </li>
+    <li>
+        <a class="index_nav_list">业务查询</a>
+        <div class="line"></div>
+    </li>
+</ul>
+<!-- 导航栏 end-->
+<!--搜索框-->
+<div class="search_top clearfix">
+    <div class="search_top_l">
+        <input type="text">
+        <div class="search_pic">
+            <img src="images/search.png">
+        </div>
+    </div>
+    <div class="search_top_r clearfix">
+        <div class="mail">
+            <img src="images/mail.png">
+        </div>
+        <div class="people">
+            <img src="images/people.png">
+        </div>
+    </div>
+</div>
+<!--搜索框end-->
+  <!-- 模板展示 begin -->
+  <div id="mapId" class="fad">
+  </div>
+  <!-- 模板展示 end -->
+<!--遮罩层-->
+<div class="mask" id="mask">
+    <div class="mask_warp">
+        <div class="maskli">
+            <div class="maskli_t clearfix">
+                <div class="continentName">
+                    亚洲
+                </div>
+                <div class="continentindro">
+                    共48个国家和地区。其中48个国家
+                </div>
+            </div>
+            <div class="maskli_list">
+                <div class="maskli_listli clearfix">
+                    <div class="continentPart">东亚(<span>05</span>)</div>
+                    <div class="continentState clearfix">
+                        <div class="partition">|</div>
+                        <div class="countries"><span class="country">中国</span><span class="country">蒙古</span><span class="country">朝鲜</span><span class="country">日本</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="maskli_listli clearfix">
+                    <div class="continentPart">东南亚(<span>11</span>)</div>
+                    <div class="continentState clearfix">
+                        <div class="partition">|</div>
+                        <div class="countries"><span class="country">菲律宾</span><span class="country">越南</span><span class="country">老挝</span><span class="country">柬埔寨</span>
+                            <span class="country">泰国</span><span class="country">马来西亚</span><span class="country">文莱</span><span class="country">新加坡</span>
+                            <span class="country">印度尼西亚</span><span class="country">东帝汶</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="maskli_listli clearfix">
+                    <div class="continentPart">南亚(<span>7</span>)</div>
+                    <div class="continentState clearfix">
+                        <div class="partition">|</div>
+                        <div class="countries"><span class="country">尼泊尔</span><span class="country">不丹</span><span class="country">孟加拉国</span><span class="country">印度</span>
+                            <span class="country">巴基斯坦</span><span class="country">斯里兰卡</span><span class="country">马尔代夫</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="maskli_listli clearfix">
+                    <div class="continentPart">中亚(<span>5</span>)</div>
+                    <div class="continentState clearfix">
+                        <div class="partition">|</div>
+                        <div class="countries"><span class="country">哈萨克斯坦</span><span class="country">吉尔吉斯斯坦</span><span class="country">塔吉克斯坦</span><span class="country">乌兹别克斯坦</span>
+                            <span class="country">土库曼斯坦</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="maskli_listli clearfix">
+                    <div class="continentPart">西亚(<span>20</span>)</div>
+                    <div class="continentState clearfix">
+                        <div class="partition">|</div>
+                        <div class="countries"><span class="country">阿富汗</span><span class="country">伊拉克</span><span class="country">伊朗</span><span class="country">叙利亚</span>
+                            <span class="country">约旦</span><span class="country">黎巴嫩</span><span class="country">以色列</span><span class="country">巴勒斯坦</span><span class="country">沙特阿拉伯</span>
+                            <span class="country">巴林</span><span class="country">卡塔尔</span><span class="country">科威特</span>
+                            <span class="country">阿拉伯联合酋长国（阿联酋）</span><span class="country">阿曼</span>
+                            <span class="country">也门</span><span class="country">格鲁吉亚</span><span class="country">亚美尼亚</span>
+                            <span class="country">阿塞拜疆</span><span class="country">土耳其</span><span class="country">塞浦路斯</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="maskli">
+            <div class="maskli_t clearfix">
+                <div class="continentName">
+                    亚洲
+                </div>
+                <div class="continentindro">
+                    共48个国家和地区。其中48个国家
+                </div>
+            </div>
+            <div class="maskli_list">
+                <div class="maskli_listli clearfix">
+                    <div class="continentPart">东亚(<span>05</span>)</div>
+                    <div class="continentState clearfix">
+                        <div class="partition">|</div>
+                        <div class="countries"><span class="country">中国</span><span class="country">蒙古</span><span class="country">朝鲜</span><span class="country">日本</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="maskli_listli clearfix">
+                    <div class="continentPart">东南亚(<span>11</span>)</div>
+                    <div class="continentState clearfix">
+                        <div class="partition">|</div>
+                        <div class="countries"><span class="country">菲律宾</span><span class="country">越南</span><span class="country">老挝</span><span class="country">柬埔寨</span>
+                            <span class="country">泰国</span><span class="country">马来西亚</span><span class="country">文莱</span><span class="country">新加坡</span>
+                            <span class="country">印度尼西亚</span><span class="country">东帝汶</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="maskli_listli clearfix">
+                    <div class="continentPart">南亚(<span>7</span>)</div>
+                    <div class="continentState clearfix">
+                        <div class="partition">|</div>
+                        <div class="countries"><span class="country">尼泊尔</span><span class="country">不丹</span><span class="country">孟加拉国</span><span class="country">印度</span>
+                            <span class="country">巴基斯坦</span><span class="country">斯里兰卡</span><span class="country">马尔代夫</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="maskli_listli clearfix">
+                    <div class="continentPart">中亚(<span>5</span>)</div>
+                    <div class="continentState clearfix">
+                        <div class="partition">|</div>
+                        <div class="countries"><span class="country">哈萨克斯坦</span><span class="country">吉尔吉斯斯坦</span><span class="country">塔吉克斯坦</span><span class="country">乌兹别克斯坦</span>
+                            <span class="country">土库曼斯坦</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="maskli_listli clearfix">
+                    <div class="continentPart">西亚(<span>20</span>)</div>
+                    <div class="continentState clearfix">
+                        <div class="partition">|</div>
+                        <div class="countries"><span class="country">阿富汗</span><span class="country">伊拉克</span><span class="country">伊朗</span><span class="country">叙利亚</span>
+                            <span class="country">约旦</span><span class="country">黎巴嫩</span><span class="country">以色列</span><span class="country">巴勒斯坦</span><span class="country">沙特阿拉伯</span>
+                            <span class="country">巴林</span><span class="country">卡塔尔</span><span class="country">科威特</span>
+                            <span class="country">阿拉伯联合酋长国（阿联酋）</span><span class="country">阿曼</span>
+                            <span class="country">也门</span><span class="country">格鲁吉亚</span><span class="country">亚美尼亚</span>
+                            <span class="country">阿塞拜疆</span><span class="country">土耳其</span><span class="country">塞浦路斯</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--遮罩层end-->
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

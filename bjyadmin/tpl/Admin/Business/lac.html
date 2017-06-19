@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DataX</title>
+    <link rel="icon" href="__PUBLIC__/Home/images/net_32.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/index.css">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/index1.css">
+    
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/bootstrap-3.3.7.css">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/home.css">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/lac.css">
+    <!--jQuery-->
+    <script src="__PUBLIC__/Home/libs/jquery.min.js"></script>
+    <!--leaflet/echarts-->
+    <link rel="stylesheet" href="__PUBLIC__/Home/libs/leaflet/leaflet.css" />
+    <script src="__PUBLIC__/Home/libs/leaflet/leaflet.js"></script>
+    <style type="text/css">
+        img{vertical-align: top}
+    </style>
+</head>
+<body>
+<!-- 导航栏 begin-->
+<ul id="index_nav">
+      <span>
+          <img src="__PUBLIC__/Home/images/logo.png" />
+      </span>
+    <li>
+        <a class="index_nav_list" href="{:U('Index/home')}">国家与地区</a>
+        <ul class="sevenContinents">
+            <li>亚洲</li>
+            <li>欧洲</li>
+            <li>北美洲</li>
+            <li>南美洲</li>
+            <li>非洲</li>
+            <li>大洋洲</li>
+            <li>南极洲</li>
+        </ul>
+        <div class="line"></div>
+    </li>
+    <li>
+        <a class="index_nav_list">运营商</a>
+        <ul class="sevenContinents">
+            <li class="active2"><a href="{:U('Index/index1')}">运营商</a></li>
+            <li><a href="{:U('Index/query')}">签约关系</a></li>
+            <li style="color: #ccc">网络</li>
+            <li style="color: #ccc">轨迹回放</li>
+        </ul>
+        <div class="line"></div>
+    </li>
+    <li class="active">
+        <a class="index_nav_list">业务查询</a>
+        <ul class="sevenContinents" style="display: block">
+            <li><a href="{:U('Index/serviceoperation')}">运营商</a></li>
+            <li><a href="{:U('Index/querybusiness')}">查询业务</a></li>
+            <li><a href="{:U('Index/devman')}">设备厂商</a></li>
+            <li><a href="{:U('Index/ne')}">网元</a></li>
+            <li class="active2"><a href="{:U('Index/lac')}">LAC表</a></li>
+        </ul>
+        <div class="line active1"></div>
+    </li>
+</ul>
+<!-- 导航栏 end-->
+    <!--搜索框-->
+    <div class="search_top clearfix">
+        <div class="search_top_l">
+            <input type="text">
+            <div class="search_pic">
+                <img src="__PUBLIC__/Home/images/search.png">
+            </div>
+        </div>
+        <div class="search_top_r clearfix">
+            <div class="people">
+                <img src="__PUBLIC__/Home/images/people.png">
+            </div>
+        </div>
+    </div>
+    <!--搜索框end-->
+    <!-- 模板展示 begin -->
+    <div id="mapId">
+    </div>
+<div class="jzcx">
+    <div class="jzcx_t">
+        基站查询
+    </div>
+    <form>
+        <div class="form-group">
+            <label>MCC</label>
+            <input type="text" id="mcc" class="form-control" placeholder="460" value="460">
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="1" checked="checked">  GSM / UMTS / LTE
+            </label>
+            <label><input type="checkbox" value="2">CDMA</label>
+        </div>
+        <div class="form-group">
+            <label>MNC</label>
+            <input type="text" class="form-control" id="mnc" placeholder="00" value="00">
+        </div>
+        <div class="form-group">
+            <label>LAC/TAC</label>
+            <input type="text" class="form-control" id="lac" placeholder="34860" value="34860">
+        </div>
+        <div class="form-group">
+            <label>CI 2G(1~65535) 3G/4G(1~268435455)</label>
+            <input type="text" class="form-control" id="ci" placeholder="62041" value="62041">
+        </div>
+    </form>
+    <button class="btn btn-default" id="btn">查询</button>
+</div>
+<div class="btn1">
+    <img src="__PUBLIC__/Home/images/liebiao.png">
+</div>
+    <!-- 模板展示 end -->
+    <script src="__PUBLIC__/Home/js/nav.js"></script>
+    <script src="__PUBLIC__/Home/js/lac.js"></script>
+    <script type="text/javascript">
+    $(function () {
+        $(".btn1").on("click",function () {
+        
+            $(".jzcx").show();
+            return false;
+        });
+        $("#mapId").on("click",function () {
+            $(".jzcx").hide();
+            return false;
+        })
+    })
+</script>
+</body>
+</html>

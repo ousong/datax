@@ -1,0 +1,30 @@
+body{
+    overflow: hidden;
+}
+.jzcx{
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 400px;
+    background-color: #295a83;
+    padding: 30px;
+    z-index: 100000000;
+    height: calc(100% - 60px);
+    display: none;
+	color:#fff;
+}
+.form-group{
+color:#fff;
+}
+.checkbox{
+color:#fff;
+}
+button{
+    margin: 0 auto;
+}
+.btn1{
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    z-index: 10000000;
+}

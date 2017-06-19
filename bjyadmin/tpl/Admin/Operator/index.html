@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DataX</title>
+    <link rel="icon" href="__PUBLIC__/Home/images/net_32.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/index.css">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/home.css">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/one.css">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/two.css">
+
+
+    <!--jQuery-->
+    <script src="__PUBLIC__/Home/libs/jquery.min.js"></script>
+    <!--leaflet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
+
+</head>
+<body>
+<!-- 导航栏 begin-->
+<ul id="index_nav">
+      <span>
+          <img src="__PUBLIC__/Home/images/logo.png" />
+      </span>
+    <li class="active">
+        <a class="index_nav_list">国家与地区</a>
+        <ul class="sevenContinents">
+            <li onclick="GetCountryData('亚洲')">亚洲</li>
+            <li onclick="GetCountryData('欧洲')">欧洲</li>
+            <li onclick="GetCountryData('北美洲')">北美洲</li>
+            <li onclick="GetCountryData('南美洲')">南美洲</li>
+            <li onclick="GetCountryData('非洲')">非洲</li>
+            <li onclick="GetCountryData('大洋洲')">大洋洲</li>
+            <li onclick="GetCountryData('南极洲')">南极洲</li>
+        </ul>
+        <div class="line active1"></div>
+    </li>
+    <li>
+        <a class="index_nav_list">运营商</a>
+        <ul class="sevenContinents">
+            <li><a href="{:U('Index/index1')}">运营商</a></li>
+            <li><a href="{:U('Index/query')}">签约关系</a></li>
+            <li style="color: #ccc">网络</li>
+            <li style="color: #ccc">轨迹回放</li>
+        </ul>
+        <div class="line"></div>
+    </li>
+    <li >
+        <a class="index_nav_list">业务查询</a>
+        <ul class="sevenContinents">
+            <li><a href="{:U('Index/serviceoperation')}">运营商</a></li>
+            <li><a href="{:U('Index/querybusiness')}">查询业务</a></li>
+            <li><a href="{:U('Index/devman')}">设备厂商</a></li>
+            <li><a href="{:U('Index/ne')}">网元</a></li>
+            <li><a href="{:U('Index/lac')}">LAC表</a></li>
+        </ul>
+        <div class="line"></div>
+    </li>
+</ul>
+<!-- <ul id="index_nav">
+      <span>
+          <img src="__PUBLIC__/Home/images/logo.png" />
+      </span>
+    <li>
+        <a class="index_nav_list">国家与地区</a>
+        <ul class="sevenContinents">
+            <li onclick="GetCountryData('亚洲')">亚洲</li>
+            <li onclick="GetCountryData('欧洲')">欧洲</li>
+            <li onclick="GetCountryData('北美洲')">北美洲</li>
+            <li onclick="GetCountryData('南美洲')">南美洲</li>
+            <li onclick="GetCountryData('非洲')">非洲</li>
+            <li onclick="GetCountryData('大洋洲')">大洋洲</li>
+            <li onclick="GetCountryData('南极洲')">南极洲</li>
+        </ul>
+        <div class="line"></div>
+    </li>
+    <li>
+        <a class="index_nav_list">运营商</a>
+            <ul class="sevenContinents">
+                <li><a href="{:U('Index/operator')}">运营商</a></li>
+                <li>签约关系</li>
+                <li style="color: #ccc">网络</li>
+                <li style="color: #ccc">轨迹回放</li>
+            </ul>
+        <div class="line"></div>
+    </li>
+    <li>
+        <a class="index_nav_list">业务查询</a>
+        <div class="line"></div>
+    </li>
+</ul> -->
+<!-- 导航栏 end-->
+<!--搜索框-->
+<div class="search_top clearfix">
+    <div class="search_top_l">
+        <input type="text">
+        <div class="search_pic">
+            <img src="__PUBLIC__/Home/images/search.png">
+        </div>
+    </div>
+    <div class="search_top_r clearfix">
+        <div class="people">
+            <img src="__PUBLIC__/Home/images/people.png">
+        </div>
+    </div>
+</div>
+<!--搜索框end-->
+  <!-- 模板展示 begin -->
+  <div id="mapId" class="fad">
+  </div>
+  <!-- 模板展示 end -->
+<!--遮罩层-->
+<div class="mask" id="mask">
+    <div class="mask_warp">
+        <div class="maskli">
+            <div class="maskli_t clearfix">
+                <div class="continentName" id="Continent1">
+                    
+                </div>
+<!--                 <div class="continentindro" id="Country_number">
+                    
+                </div> -->
+            </div>
+            <div class="maskli_list" id='diqu'>
+               
+            </div>
+        </div>
+   
+    </div>
+</div>
+<!--遮罩层end-->
+
+    <script src="__PUBLIC__/Home/js/index.js"></script>
+    <script src="__PUBLIC__/Home/js/nav.js"></script>
+</body>
+</html>

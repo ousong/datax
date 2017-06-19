@@ -1,0 +1,151 @@
+
+/* 初始化样式begin */
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,select,header,footer,nav,aside,input,textarea{
+    margin:0;
+    padding:0;
+    border:0;
+    box-sizing: border-box;
+    font-size: 14px;
+    color:#333;
+    font-family: "微软雅黑";
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+a{text-decoration: none;}                          /* 去掉a标签下划线 */
+ul{list-style: none;}                             /* 去掉ul前面点 */
+.responsive-img{width: 100%;display: block;}    /* 图片100% */
+em{font-style: normal;}                         /* em标签样式正常 */
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{zoom: 1}
+/* 初始化样式 end */
+#mapBusiness{
+     width: calc(100% - 200px);
+     height: calc(100% - 80px);
+     float: right;
+     background: #ccc;
+ }
+#showUL{
+    width: 322px;
+    height: calc(100% - 80px);
+    background: #eee;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    z-index: 10000;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    display: none;
+}
+#showUL p{
+    display: block;
+    width: 300px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 17px;
+    color: #535e6f;
+    font-weight:700;
+    background: url("../images/guobg.png") no-repeat left center;
+    text-indent: 30px;
+}
+#showUL li{
+    display: block;
+    width: auto;
+    height: auto;
+    margin-bottom: 2px;
+}
+.showTrue{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top:200px;
+    left: 300px;
+    background: #3f3;
+}
+/* 首页导航栏 begin*/
+#index_nav{
+    width: 200px;
+    height: 100%;
+    float: left;
+    background: #374c6c;
+}
+#index_nav>span{
+    display: block;
+    width: 200px;
+    height: 121px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #151925;
+    text-align: center;
+    line-height: 121px;
+    padding-top: 25px;
+    cursor: pointer;
+
+}
+#index_nav>span img{
+    width: 148px;
+    height: 71px;
+
+}
+#index_nav>li{
+    position: relative;
+    width: 200px;
+    min-height: 90px;
+    line-height: 90px;
+    font-size: 18px;
+    height:auto;
+    color: #fff;
+    cursor: pointer;
+}
+#index_nav>.active{
+    background-color: #596f90;
+}
+#index_nav>li>.line{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 90px;
+    width: 6px;
+}
+#index_nav>li>.active1{
+    background-color: #44bfed;
+}
+.index_nav_list{
+    display: block;
+    width: 100%;
+    height: 90px;
+    text-align: center;
+    line-height: 80px;
+    color: #fff;
+
+}
+.sevenContinents{
+    display: none;
+    margin-left: 4px;
+    border-left: 2px solid #3598bd;
+    width: 196px;
+}
+.sevenContinents .active2{
+    background-color: #374c6c;
+    color: #fff;
+}
+.sevenContinents>li{
+    height: 59px;
+    line-height: 59px;
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    background-color: #2b3b53;
+    border-bottom: 1px solid #374c6c;
+    cursor: pointer;
+}
+/* 首页导航栏 end*/
+
+
+
+
+/*  1.1.0  Lyb end*/

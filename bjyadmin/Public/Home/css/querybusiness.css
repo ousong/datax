@@ -1,0 +1,112 @@
+/*查询业务*/
+.operator_t{
+    padding: 0 30px;
+    background-color: #fff;
+    width: calc(100% - 20px);
+    margin: 10px auto 0;
+}
+.operator_t>.allChoose{
+    border-bottom: 1px dotted #d9dde3;
+    padding: 15px 0;
+    height: 70px;
+    line-height: 40px;
+}
+.operator_t>.allChoose>.allChoose_con{
+    border: 1px solid #ff0000;
+    padding: 8px 8px;
+    color: #374c6c;
+    font-size: 14px;
+    position: relative;
+    margin-right: 40px;
+}
+.operator_t>.allChoose>.allChoose_con1{
+    border: 1px solid #374c6c;
+    padding: 8px 8px;
+    color: #374c6c;
+    font-size: 14px;
+    cursor: pointer;
+}
+.operator_t>.allChoose>.allChoose_con>img{
+    position: absolute;
+    width: 8px;
+    height: auto;
+    right: 1px;
+    top: 1px;
+    cursor: pointer;
+}
+.operator_t>.allChoose>.search{
+    width: 180px;
+    padding-top: 6px;
+    float: right;
+    line-height: 0;
+}
+.operator_t>.allChoose>.search>.search_warp{
+    float: left;
+    width: 110px;
+    height: 24px;
+    border: 1px solid #d2d2d2;
+}
+.operator_t>.allChoose>.search>.search_warp>input{
+    width: 100%;
+    height: 100%;
+    padding-left: 8px;
+}
+.operator_t>.allChoose>.search>.button{
+    float: left;
+    margin-left: 10px;
+    height: 24px;
+    width: 60px;
+    border: 1px solid #d2d2d2;
+    text-align: center;
+    line-height: 22px;
+    background-color: #eeeeee;
+}
+.operator_t>.chau{
+    line-height: 50px;
+    border-bottom: 1px solid #eceef1;
+}
+.operator_t>.chau>.chau_l{
+    float: left;
+    width: 72px;
+    color: #b7b8b9;
+}
+.operator_t>.chau>.chau_r{
+    float: left;
+    width: calc(100% - 72px);
+    color: #374c6c;
+}
+.operator_t>.chau>.chau_r>span{
+    margin-left: 30px;
+    cursor: pointer;
+}
+.operator_b{
+    background-color: #fff;
+    width: calc(100% - 20px);
+    margin: 15px auto 0;
+}
+.operator_b>table{
+    border: 1px solid #596f90;
+    width: 100%;
+}
+.operator_b>table thead th{
+    width: 7.69%;
+    line-height: 66px;
+    border: 1px solid #596f90;
+    text-align: center;
+    color: #fff;
+    background-image: -webkit-linear-gradient(to top,#374c6c,#596f90);
+    background-image: linear-gradient(to top,#374c6c,#596f90);
+}
+.operator_b>table td{
+    text-align: center;
+    padding: 30px 0;
+    width: 7.69%;
+    border: 1px solid #596f90;
+}
+.operator_b>table tr:nth-child(2n+1){
+    background-color: #eee;
+}
+.operator_b>table tr:nth-child(2n){
+    background-color: #fff;
+}
+/*查询业务end*/

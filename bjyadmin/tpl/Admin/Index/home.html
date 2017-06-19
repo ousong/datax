@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DataX</title>
+    <link rel="icon" href="__PUBLIC__/Home/images/net_32.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/index.css">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/home.css">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/one.css">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/two.css">
+
+
+    <!--jQuery-->
+    <script src="__PUBLIC__/Home/libs/jquery.min.js"></script>
+    <!--leaflet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
+
+</head>
+<body>
+
+<!--搜索框-->
+<div class="search_top clearfix">
+    <div class="search_top_l">
+        <input type="text">
+        <div class="search_pic">
+            <img src="__PUBLIC__/Home/images/search.png">
+        </div>
+    </div>
+    <div class="search_top_r clearfix">
+        <div class="people">
+            <img src="__PUBLIC__/Home/images/people.png">
+        </div>
+    </div>
+</div>
+<!--搜索框end-->
+  <!-- 模板展示 begin -->
+  <div id="mapId" class="fad">
+  </div>
+  <!-- 模板展示 end -->
+<!--遮罩层-->
+<div class="mask" id="mask">
+    <div class="mask_warp">
+        <div class="maskli">
+            <div class="maskli_t clearfix">
+                <div class="continentName" id="Continent1">
+                    
+                </div>
+<!--                 <div class="continentindro" id="Country_number">
+                    
+                </div> -->
+            </div>
+            <div class="maskli_list" id='diqu'>
+               
+            </div>
+        </div>
+   
+    </div>
+</div>
+<!--遮罩层end-->
+
+    <script src="__PUBLIC__/Home/js/index.js"></script>
+    <script src="__PUBLIC__/Home/js/nav.js"></script>
+</body>
+</html>

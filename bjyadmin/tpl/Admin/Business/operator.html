@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DataX</title>
+    <link rel="icon" href="__PUBLIC__/Home/images/net_32.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/index.css">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/home.css">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/serviceoperation.css">
+    <!--jQuery-->
+    <script src="__PUBLIC__/Home/libs/jquery.min.js"></script>
+</head>
+<body>
+<!-- 导航栏 begin-->
+<ul id="index_nav">
+      <span>
+          <img src="__PUBLIC__/Home/images/logo.png" />
+      </span>
+    <li>
+        <a class="index_nav_list" href="{:U('Index/home')}">国家与地区</a>
+        <ul class="sevenContinents">
+            <li>亚洲</li>
+            <li>欧洲</li>
+            <li>北美洲</li>
+            <li>南美洲</li>
+            <li>非洲</li>
+            <li>大洋洲</li>
+            <li>南极洲</li>
+        </ul>
+        <div class="line"></div>
+    </li>
+    <li>
+        <a class="index_nav_list">运营商</a>
+        <ul class="sevenContinents" >
+            <li><a href="{:U('Index/index1')}">运营商</a></li>
+            <li><a href="{:U('Index/query')}">签约关系</a></li>
+            <li style="color: #ccc">网络</li>
+            <li style="color: #ccc">轨迹回放</li>
+        </ul>
+        <div class="line"></div>
+    </li>
+    <li class="active">
+        <a class="index_nav_list">业务查询</a>
+        <ul class="sevenContinents" style="display: block">
+            <li class="active2"><a href="{:U('Index/serviceoperation')}">运营商</a></li>
+            <li><a href="{:U('Index/querybusiness')}">查询业务</a></li>
+            <li><a href="{:U('Index/devman')}">设备厂商</a></li>
+            <li><a href="{:U('Index/ne')}">网元</a></li>
+            <li><a href="{:U('Index/lac')}">LAC表</a></li>
+        </ul>
+        <div class="line active1"></div>
+    </li>
+</ul>
+<!-- 导航栏 end-->
+<!--搜索框-->
+<div class="search_top clearfix">
+    <div class="search_top_l">
+        <input type="text">
+        <div class="search_pic">
+            <img src="__PUBLIC__/Home/images/search.png">
+        </div>
+    </div>
+    <div class="search_top_r clearfix">
+        <div class="people">
+            <img src="__PUBLIC__/Home/images/people.png">
+        </div>
+    </div>
+</div>
+<!--搜索框end-->
+<!-- 模板展示 begin -->
+<div id="mapId" class="fad">
+    <div class="operator_t">
+        <div class="allChoose">
+            <!--<span class="allChoose_con">
+                亚洲-中国-中国移动
+                <img src="images/chacha.png">
+            </span>-->
+            <div class="search clearfix">
+                <div class="search_warp">
+                    <input type="text" placeholder="输入查找文字">
+                </div>
+                <div class="button">确定</div>
+            </div>
+        </div>
+        <div class="chau clearfix" id="continent">
+            <div class="chau_l">大洲：</div>
+            <div class="chau_r">
+                <!-- <span>亚洲</span><span>欧洲</span>
+                <span>北美洲</span><span>南美洲</span>
+                <span>非洲</span><span>大洋洲</span>
+                <span>南极洲</span> -->
+                <span onclick="getcontinent('亚洲')">亚洲</span><span onclick="getcontinent('欧洲')">欧洲</span>
+                <span onclick="getcontinent('北美洲')">北美洲</span><span onclick="getcontinent('南美洲')">南美洲</span>
+                <span onclick="getcontinent('非洲')">非洲</span><span onclick="getcontinent('大洋洲')">大洋洲</span>
+                <span onclick="getcontinent('南极洲')">南极洲</span>
+            </div>
+        </div>
+        <div class="chau clearfix" id="state" style="display: none;">
+            <div class="chau_l">国家：</div>
+            <div class="chau_r">
+            </div>
+        </div>
+        <div class="chau clearfix" id="operator" style="display: none;">
+            <div class="chau_l">运营商：</div>
+            <div class="chau_r">
+            </div>
+        </div>
+    </div>
+    <div class="operator_b">
+        <table cellpadding="0" cellspacing="0" border="1">
+            <thead>
+            <tr>
+                <th>运营商名称</th>
+                <th>所属国家</th>
+                <th>网络制式</th>
+                <th>签约漫游数</th>
+                <th>网络拓扑图</th>
+            </tr>
+            </thead>
+            <tbody id="operator123">
+           <!--  <tr>
+                <td>中国移动</td>
+                <td>zhong</td>
+                <td>erwfefds643</td>
+                <td>5</td>
+                <td><a href="#">查看拓扑图</a></td>
+            </tr> -->
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- 模板展示 end -->
+<script src="__PUBLIC__/Home/js/serviceoperation.js"></script>
+<script src="__PUBLIC__/Home/js/nav.js"></script>
+</body>
+</html>
